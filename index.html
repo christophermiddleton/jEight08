@@ -1,0 +1,125 @@
+<html>
+<head>
+	<title>jEight-0-8</title>
+	<script type='text/javascript' src='jquery-2.1.0.min.js'></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body>
+	<div id="main">
+		<h2>jEight-0-8</h2>
+		<p style="font-size: 12px">Press the Play button to start the drum pattern playing. Use the grid below to program your own sequence.</p>
+		<p style="font-size: 12px">Individual drum sounds can be triggered using the Q, W, E and R keys. Have fun!</p>
+		<p>Tempo: <input id ="tempo" type="number" min="60" max="190" step="1" value="115" style="width: 50px" >bpm
+			
+		</select>
+		</p>
+		<div class="controls">
+			<div class="box" id="play">Play</div>
+			<div class="box" id="stop">Stop</div>
+			<div class="box" id="reset">Reset</div>
+		</div>
+		<div id="pads">
+			<div class="box" id="kick">Kick</div>
+			<div class="box" id="snare">Snare</div>
+			<div class="box" id="hat">Hat</div>
+			<div class="box" id="hat2">Hat 2</div>
+		</div>
+		<div class="lane" id="indicator">
+			<div style="width: 50px; border-style: none"></div>
+			<div>1</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div>2</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div>3</div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div>4</div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="lane">
+			<div style="width: 50px; border-style: none">Kick</div>
+			<div id="k1" class="step" onClick="reply_click(this)">1</div>
+			<div id="k2" class="step" onClick="reply_click(this)">2</div>
+			<div id="k3" class="step" onClick="reply_click(this)">3</div>
+			<div id="k4" class="step" onClick="reply_click(this)">4</div>
+			<div id="k5" class="step" onClick="reply_click(this)">5</div>
+			<div id="k6" class="step" onClick="reply_click(this)">6</div>
+			<div id="k7" class="step" onClick="reply_click(this)">7</div>
+			<div id="k8" class="step" onClick="reply_click(this)">8</div>
+			<div id="k9" class="step" onClick="reply_click(this)">9</div>
+			<div id="k10" class="step" onClick="reply_click(this)">10</div>
+			<div id="k11" class="step" onClick="reply_click(this)">11</div>
+			<div id="k12" class="step" onClick="reply_click(this)">12</div>
+			<div id="k13" class="step" onClick="reply_click(this)">13</div>
+			<div id="k14" class="step" onClick="reply_click(this)">14</div>
+			<div id="k15" class="step" onClick="reply_click(this)">15</div>
+			<div id="k16" class="step" onClick="reply_click(this)">16</div>
+		</div>
+		<div class="lane">
+			<div style="width: 50px; border-style: none">Snare</div>
+			<div id="s1" onClick="reply_click(this)">1</div>
+			<div id="s2" onClick="reply_click(this)">2</div>
+			<div id="s3" onClick="reply_click(this)">3</div>
+			<div id="s4" onClick="reply_click(this)">4</div>
+			<div id="s5" onClick="reply_click(this)">5</div>
+			<div id="s6" onClick="reply_click(this)">6</div>
+			<div id="s7" onClick="reply_click(this)">7</div>
+			<div id="s8" onClick="reply_click(this)">8</div>
+			<div id="s9" onClick="reply_click(this)">9</div>
+			<div id="s10" onClick="reply_click(this)">10</div>
+			<div id="s11" onClick="reply_click(this)">11</div>
+			<div id="s12" onClick="reply_click(this)">12</div>
+			<div id="s13" onClick="reply_click(this)">13</div>
+			<div id="s14" onClick="reply_click(this)">14</div>
+			<div id="s15" onClick="reply_click(this)">15</div>
+			<div id="s16" onClick="reply_click(this)">16</div>
+		</div>
+		<div class="lane">
+			<div style="width: 50px; border-style: none">Hat</div>
+			<div id="h1" onClick="reply_click(this)">1</div>
+			<div id="h2" onClick="reply_click(this)">2</div>
+			<div id="h3" onClick="reply_click(this)">3</div>
+			<div id="h4" onClick="reply_click(this)">4</div>
+			<div id="h5" onClick="reply_click(this)">5</div>
+			<div id="h6" onClick="reply_click(this)">6</div>
+			<div id="h7" onClick="reply_click(this)">7</div>
+			<div id="h8" onClick="reply_click(this)">8</div>
+			<div id="h9" onClick="reply_click(this)">9</div>
+			<div id="h10" onClick="reply_click(this)">10</div>
+			<div id="h11" onClick="reply_click(this)">11</div>
+			<div id="h12" onClick="reply_click(this)">12</div>
+			<div id="h13" onClick="reply_click(this)">13</div>
+			<div id="h14" onClick="reply_click(this)">14</div>
+			<div id="h15" onClick="reply_click(this)">15</div>
+			<div id="h16" onClick="reply_click(this)">16</div>
+		</div>
+		<div class="lane">
+			<div style="width: 50px; border-style: none">Hat 2</div>
+			<div id="o1" onClick="reply_click(this)">1</div>
+			<div id="o2" onClick="reply_click(this)">2</div>
+			<div id="o3" onClick="reply_click(this)">3</div>
+			<div id="o4" onClick="reply_click(this)">4</div>
+			<div id="o5" onClick="reply_click(this)">5</div>
+			<div id="o6" onClick="reply_click(this)">6</div>
+			<div id="o7" onClick="reply_click(this)">7</div>
+			<div id="o8" onClick="reply_click(this)">8</div>
+			<div id="o9" onClick="reply_click(this)">9</div>
+			<div id="o10" onClick="reply_click(this)">10</div>
+			<div id="o11" onClick="reply_click(this)">11</div>
+			<div id="o12" onClick="reply_click(this)">12</div>
+			<div id="o13" onClick="reply_click(this)">13</div>
+			<div id="o14" onClick="reply_click(this)">14</div>
+			<div id="o15" onClick="reply_click(this)">15</div>
+			<div id="o16" onClick="reply_click(this)">16</div>
+		</div>
+	</div>	
+	</body>
+	</html>
